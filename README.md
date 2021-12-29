@@ -1,7 +1,7 @@
-# Weather-Journal App Project
+# Capstone Travel App Project
 
 ## Overview
-This is a my course work for the Udacity Nanodegree Front End Course that involves me making a weather app and a server that requests information from the OpenWeatherMap API.
+This is a my course work for the Udacity Nanodegree Front End Course.
 
 ## Getting started 
 Ensure you have nodejs installed on your machine.
