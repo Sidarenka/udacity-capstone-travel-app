@@ -36,30 +36,4 @@ To run the app on the development server you need to first, build the app by run
 `npm run build-dev`
 Then in a different terminal start the express server-
 `npm start`
-The app will run on `localhost:3000`
-
-
-
-## Getting started 
-Ensure you have nodejs installed on your machine.
-
-## Installation
-Enter the main directory and run
-
-```console
-npm install
-```
-
-To install all the dependencies
-
-## Run
-
-Once the installation process has been done, to run the project, you can run:
-
-```console
-npm run start
-```
-
-Once the project is running, the website can be accessed from `localhost:4000` by default. 
-
-
+The app will run on `localhost:8080`
