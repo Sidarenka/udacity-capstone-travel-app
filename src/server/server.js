@@ -44,7 +44,7 @@ app.get('/', function (req, res) {
 });
 
 // Post route that collects user data and stores it in "projectData" object
-app.post('http://localhost:8081/clientData', async (req, res) => {
+app.post('/clientData', async (req, res) => {
     const data = req.body;
     projectData = data;
     console.log(projectData);

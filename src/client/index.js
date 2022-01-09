@@ -1,7 +1,6 @@
 import { picker } from "./js/date_picker";
 import { updateUI } from "./js/app";
 
-import "./media/img-1.jpeg";
 import "./media/backdrop.jpeg";
 import "./media/airplane.png";
 
