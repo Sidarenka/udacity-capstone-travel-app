@@ -17,9 +17,9 @@ async function userInput(e) {
 
   if (parseInt(date) >= parseInt(currentDate)) {
     // Store the day month and year
-    const day = date.slice(0, 2);
-    const month = date.slice(3, 5);
-    const year = date.slice(6, 10);
+    const day = date.slice(0, 1);
+    const month = date.slice(2, 4);
+    const year = date.slice(5, 9);
 
     // Then change the order so and store in a variable so we can use this format for weatherbit api
     const fixDate = year + "-" + month + "-" + day;
@@ -34,11 +34,8 @@ async function userInput(e) {
 
     await callServer("http://localhost:8081/getPix");
 
-    await callServer("http://localhost:8081/getRest");
+    const getPlanData = await callServer("http://localhost:8081/getData");
 
-    const getPlanData = await callServer(" http://localhost:8081/getData");
-
-    console.log(getPlanData);
     updateUI();
   } else {
     alert("Please enter a valid date.");
@@ -79,17 +76,10 @@ const callServer = async (url) => {
 
 // function that updates the UI with a call to the server
 async function updateUI() {
-  const response = await fetch("http://localhost:/getData");
+  const response = await fetch("http://localhost:8081/getData");
   const uiData = await response.json();
   console.log(uiData);
   document.querySelector(".city-image").src = uiData.image1;
-  document.querySelector(".image-icon").src = uiData.flag;
-  document.querySelector(".list-country").innerHTML =
-    uiData.name + ", " + uiData.countryCode;
-  document.querySelector(".call-code").innerHTML = "+" + uiData.callingCode;
-  document.querySelector(".currency").innerHTML =
-    uiData.currency + "(" + uiData.currencySym + ")";
-  document.querySelector(".language").innerHTML = uiData.language;
   document.querySelector(".city-name").innerHTML = uiData.name;
   document.querySelector(
     ".icon-image"

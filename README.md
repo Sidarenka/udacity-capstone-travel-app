@@ -6,6 +6,8 @@ Weatherbit API is used to get the weather forecast.
 Geonames API is used to convert the coordinates into desired location. 
 Pixabay API is used to display the image of the location.
 
+![alt text]()
+
 ## Technologies used 
 - HTML
 - CSS 

@@ -89,7 +89,7 @@ app.get('/getWeatherbit', async (req, res) => {
         projectData['description'] = weatherbitData.data[0].weather.description;
         projectData['temp'] = weatherbitData.data[0].temp;
         res.send(weatherbitData);
-        console.log(weatherbitData);
+        // console.log(weatherbitData);
         // If failed connection to API, return null
     } catch (error) {
         console.log(`Error connecting to server: ${error}`);
@@ -137,45 +137,15 @@ app.get('/getPix', async (req, res) => {
         // If failed connection to API, return null
     } catch (error) {
         console.log(`Error connecting to server: ${error}`)
-        res.send(null)
+        // res.send(null)
     }
-})
-
-// endpoint for REST api
-app.get('/getRest', async (req, res) => {
-    console.log('Calling rest API');
-    const country = projectData.countryName;
-    const restUrl = `https://restcountries.eu/rest/v2/name/${country}`;
-    console.log(`Rest API url is ${restUrl}`);
-    try {
-        const response = await fetch(restUrl);
-
-        // Checks for failed data transfer from API, returns null
-        if (!response.ok) {
-            console.log(`Error connecting to Rest API. Response status ${response.status}`);
-            res.send(null)
-        }
-        const restData = await response.json();
-        projectData['countryCode'] = restData[0].alpha2Code;
-        projectData['callingCode'] = restData[0].callingCodes;
-        projectData['currency'] = restData[0].currencies[0].name;
-        projectData['currencySym'] = restData[0].currencies[0].symbol;
-        projectData['language'] = restData[0].languages[0].name;
-        projectData['flag'] = restData[0].flag;
-        res.send(restData);
-        console.log(restData);
-        // If failed connection to API, return null
-    } catch (error) {
-        console.log(`Error connecting to server: ${error}`);
-        res.send(null);
-    } 
 })
 
 // GET endpoint gets the data for the UI
 app.get('/getData', (req, res) => {
     console.log(projectData);
-    res.send(projectData);
-    res.json({message: 'Data received'});
+    // res.send(projectData);
+    res.json(projectData);
 })
 
 // Endpoint for testing express server
