@@ -1,5 +1,5 @@
 {
-  "name": "example-project",
+  "name": "Capstone - Travel App",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Galina Sidarenka",
   "license": "ISC",
   "description": "",
   "dependencies": {
