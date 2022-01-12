@@ -2,7 +2,10 @@ import fetch from "node-fetch";
 import { doc } from "prettier";
 
 // This event listener listens for a click on the search button
-document.getElementById("btn").addEventListener("click", userInput);
+var el = document.getElementById("btn");
+if (el) {
+  el.addEventListener("click", userInput, false);
+}
 
 // Function that fires off when the click has been registered
 async function userInput(e) {
@@ -89,4 +92,4 @@ async function updateUI() {
   document.querySelector(".departure").innerHTML = uiData.date;
 }
 
-export { callServer, updateUI };
+export { userInput, callServer, updateUI };

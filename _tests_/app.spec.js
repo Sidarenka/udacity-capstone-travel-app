@@ -2,6 +2,6 @@
  import { userInput } from "../src/client/js/app";
 
  describe("Testing the submit functionality", () => {
-   test("Testing the handleSubmit() function", () => {
+   test("Testing the userInput() function", () => {
           expect(userInput).toBeDefined();
  })});

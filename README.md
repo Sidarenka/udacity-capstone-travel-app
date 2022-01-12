@@ -45,9 +45,5 @@ Then in a different terminal start the express server-
 The app will run on `localhost:8080`
 
 ## Jest test execution 
-The app uses SuperTest assertions library for testing the server.js
-Prior to running the test, ensure that supertest is installed by running- 
-`npm install supertest --save-dev`
-To run the test run-
-`npm run test`
+The project has Jest installed. To run Jest execute `npm run test`.
 
